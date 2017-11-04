@@ -2,7 +2,7 @@
 
 A program to access the [KNX BAOS modules](https://weinzierl.de/index.php/de/alles-knx1/knx-module) from [Weinzierl](https://weinzierl.de/) for the Raspbery Pi written in C++ and the KNX BAOS SDK.
 
-This programm communicates with the weinzierl KNXBaos Module (838 kBerry or 832) and offers methods to listen for KNX Events from the module an write KNX Events to the module.
+This program communicates with the weinzierl KNXBaos Module (838 kBerry or 832) and offers methods to listen for KNX Events from the module an write KNX Events to the module.
 
 ## UDP Server
 The program also provides an UDP server mode. In this mode, KNX Events that are received by the Baos Module are sent as UDP packets to a specified IP:Port. The program also listens on a specified IP:Port for UDP packets containing KNX Events and writes this events to the Baos Module.
@@ -11,7 +11,7 @@ UDP packets with KNX Events are sent to localhost:28282 by default.
 The server listens for UDP packets with KNX Events on 0.0.0.0:28281 by default.
 
 The UDP packages sent by and received from the KnxBaosTools udpserver contain JSON strings. This JSON strings encode the KNX Event.
-Messages sent from the KnxBaosTools udpserver contain the raw data received by the KNX BAOS module in hexadezimal format. Messages sent to the KnxBaosTools udpserver do not need to contain the raw data.
+Messages sent from the KnxBaosTools udpserver contain the raw data received by the KNX BAOS module in hexadecimal format. Messages sent to the KnxBaosTools udpserver do not need to contain the raw data.
 
 **UDP Packet Content Examples:**
 ```
@@ -24,7 +24,7 @@ Messages sent from the KnxBaosTools udpserver contain the raw data received by t
 ## Supported KNX Datapoints
 Right now only the following Datapoints are implemented, but others can be added easily:
 - DPT_1  (bool)
-- DPT_3  (controll dimming)
+- DPT_3  (control dimming)
 - DPT_5  (byte)
 - DPT_16 (string)
 
@@ -55,7 +55,7 @@ udpserver                     send and receive knx events over UDP
 
 write <json string>           writes to the knx bus
                               e.g. write {"data":true,"id":1,"type":"bool"}
-listen                        prints incomming knx packages
+listen                        prints incoming knx packages
 programming <enable|disable>  enables or disables the programming mode
 info [--parameters]           prints baos device details
 testconnection                tests the connection to knx baos
@@ -254,7 +254,7 @@ wget http://pocoproject.org/releases/poco-1.7.8/poco-1.7.8p2-all.tar.gz
 tar xzf poco-1.7.8p2-all.tar.gz
 ```
 
-In order to make it cross-compile, we need to define the RaspberryPI platform
+To make it cross-compile, we need to define the RaspberryPI platform
 
 ```
  cd poco-1.7.8p2-all
