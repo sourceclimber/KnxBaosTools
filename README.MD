@@ -207,11 +207,12 @@ git clone https://github.com/weinzierl-engineering/baos.git .
 ```
 
 ### Compile Baos SDK
+```
 baos_sdk.zip
 chmod u+x build_raspbian.sh
 ./build_raspbian.sh
 baos_sdk.zip
-
+```
 
 ## Setup Eclipse for Cross Compiling for the Raspberry Pi
 See: http://www.hertaville.com/development-environment-raspberry-pi-cross-compiler.html
